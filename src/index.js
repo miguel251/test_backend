@@ -18,5 +18,5 @@ app.use(passport);
 router(app);
 
 app.listen(config.app_port, () => {
-    console.log(`🚀 Server is ready at: http://localhost${config.app_port}`);
+    console.log(`🚀 Server is ready at: http://localhost:${config.app_port}`);
 })

@@ -3,14 +3,14 @@ import frontend from "./frontend";
 
 export default function(app){
     
-    frontend(app);
-
     app.use('/info', function(req, res, next) {
         res.status(200).json({
             app: config.app_name,
             version: config.app_version
         });
     });
+
+    frontend(app);
 
     app.use(function(req, res, next){
         let err = new Error('Not Found');
